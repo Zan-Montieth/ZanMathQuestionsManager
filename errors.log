@@ -1,0 +1,6 @@
+2024/10/20 03:59:45 Server started at http://172.234.228.71:80
+├─ REST API: http://172.234.228.71:80/api/
+└─ Admin UI: http://172.234.228.71:80/_/
+2024/10/20 18:15:22 Server started at http://zanmath.com:80
+├─ REST API: http://zanmath.com:80/api/
+└─ Admin UI: http://zanmath.com:80/_/
