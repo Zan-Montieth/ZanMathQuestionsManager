@@ -27,15 +27,16 @@
           messages = messages.filter((m) => m.id !== record.id);
         }
       });
-
+    console.log("went through the subscription process")
   });
 
   async function sendMessage() {
     const data = {
-      text: newMessage,
+      field: newMessage,
       user: $currentUser.id,
     };
     const createdMessage = await pb.collection('messages').create(data);
+    newMessage = "";
   }
 
   onDestroy(() => {
@@ -54,8 +55,8 @@
         width = "40px"
       />
       <div>
-        <p>Send by @{message.expand?.user?.username}</p>
-        <p class="msg-text">{message.txt}</p>
+        <p>Sent by @{message.expand?.user?.username}</p>
+        <p class="msg-text">{message.field}</p>
       </div>
     </div>
   {/each}
